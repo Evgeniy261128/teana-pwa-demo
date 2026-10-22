@@ -163,9 +163,9 @@ function RecipesContent() {
     : RECIPES;
 
   return (
-    <main className="px-5 py-6 pb-24 flex flex-col gap-6">
+    <main className="px-5 py-6 pb-28 flex flex-col gap-6">
       {/* Заголовок секции */}
-      <div className="px-5">
+      <div>
         <div className="flex items-center gap-2 mb-1">
           <div
             className="w-1 h-6 rounded-full"

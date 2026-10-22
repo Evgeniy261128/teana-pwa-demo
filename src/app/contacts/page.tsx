@@ -40,7 +40,7 @@ function ContactRow({
   href?: string;
 }) {
   const inner = (
-    <div className="flex items-start gap-3 py-3">
+    <div className="py-4 first:pt-0 last:pb-0 flex items-start gap-4">
       <div
         className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
         style={{
@@ -72,9 +72,9 @@ function ContactRow({
 // ─── Страница контактов ─—
 export default function ContactsPage() {
   return (
-    <main className="px-5 py-6 pb-24 flex flex-col gap-6">
+    <main className="px-5 py-6 pb-28 flex flex-col gap-6">
       {/* Заголовок */}
-      <div className="px-5">
+      <div>
         <div className="flex items-center gap-2 mb-1">
           <div
             className="w-1 h-6 rounded-full"
@@ -133,7 +133,7 @@ export default function ContactsPage() {
         </div>
 
         {/* Контактные строки */}
-        <div className="p-4 divide-y" style={{ borderColor: "rgba(0,0,0,0.05)" }}>
+        <div className="p-6 flex flex-col gap-5 divide-y divide-neutral-100">
           <ContactRow
             icon={<Phone size={16} color="#f4e49a" />}
             label="Телефон / WhatsApp"
@@ -161,7 +161,7 @@ export default function ContactsPage() {
       {/* Кнопка звонка */}
       <a
         href="tel:+79991234567"
-        className="flex items-center justify-center gap-2 w-full py-3 px-6 rounded-xl font-semibold text-base shadow-md transition-transform active:scale-95"
+        className="w-fit min-w-[220px] mx-auto px-8 py-3.5 rounded-xl flex items-center justify-center gap-2 font-semibold text-base shadow-md transition-transform active:scale-95"
         style={{
           background: "linear-gradient(135deg, #7b1a2e 0%, #5c1020 100%)",
           color: "#f4e49a",

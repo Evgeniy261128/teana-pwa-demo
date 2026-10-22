@@ -52,11 +52,9 @@
   --radius-3xl: 1.5rem;
 }
 
-/* ─── Сброс браузерных стилей ─── */
+/* ─── Сброс браузерных стилей (без margin/padding — они блокируют @layer utilities в Tailwind v4) ─── */
 *, *::before, *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {

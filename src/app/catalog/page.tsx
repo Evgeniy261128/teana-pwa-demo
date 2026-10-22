@@ -116,7 +116,7 @@ function TeaCard({ tea, onRecipe }: { tea: typeof TEAS[0]; onRecipe: () => void 
           </span>
           <button
             onClick={onRecipe}
-            className="px-5 py-2.5 bg-rose-900 text-white rounded-xl shadow-md transition-transform active:scale-95 text-sm font-medium w-auto"
+            className="w-auto shrink-0 px-5 py-2.5 rounded-xl bg-rose-900 text-white shadow-md transition-transform active:scale-95 text-sm font-medium"
           >
             <BookOpen size={14} strokeWidth={2} />
             Как заваривать
@@ -132,9 +132,9 @@ export default function CatalogPage() {
   const router = useRouter();
 
   return (
-    <main className="px-5 py-6 pb-24 flex flex-col gap-6">
+    <main className="px-5 py-6 pb-28 flex flex-col gap-6">
       {/* Заголовок секции */}
-      <div className="px-5">
+      <div>
         <div className="flex items-center gap-2 mb-1">
           <div
             className="w-1 h-6 rounded-full"

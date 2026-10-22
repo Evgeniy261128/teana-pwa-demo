@@ -20,7 +20,7 @@ function NotInstalledView({ onEmulate }: { onEmulate: () => void }) {
       </div>
 
       <h2
-        className="px-5 text-xl font-bold text-center mb-3"
+        className="text-xl font-bold text-center mb-3"
         style={{ color: "#7b1a2e", fontFamily: "'Georgia', serif" }}
       >
         Откройте доступ к QR-коду
@@ -62,7 +62,7 @@ function NotInstalledView({ onEmulate }: { onEmulate: () => void }) {
       {/* Кнопка эмуляции (демо-режим) */}
       <button
         onClick={onEmulate}
-        className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm shadow-md transition-transform active:scale-95"
+        className="w-fit min-w-[220px] mx-auto px-8 py-3.5 rounded-xl flex items-center justify-center gap-2 font-semibold text-sm shadow-md transition-transform active:scale-95"
         style={{
           background: "rgba(123,26,46,0.08)",
           color: "#7b1a2e",
@@ -191,7 +191,7 @@ function InstalledView({
       {isEmulated && (
         <button
           onClick={onDeemulate}
-          className="flex items-center gap-2 mt-5 px-6 py-3 rounded-xl text-sm shadow-md transition-transform active:scale-95"
+          className="w-fit min-w-[220px] mx-auto px-8 py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm shadow-md transition-transform active:scale-95"
           style={{
             background: "rgba(123,26,46,0.08)",
             color: "#7b1a2e",
@@ -231,7 +231,7 @@ export default function ProfilePage() {
   const showQR = isPWA || isEmulated;
 
   return (
-    <main className="px-5 py-6 pb-24 flex flex-col gap-6">
+    <main className="px-5 py-6 pb-28 flex flex-col gap-6">
       {showQR ? (
         <InstalledView
           isEmulated={isEmulated}
